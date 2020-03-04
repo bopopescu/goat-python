@@ -25,6 +25,7 @@ def main():
     result = etree.tostring(html)
     # 这里利用 decode 方法将其转成 str 类型
     print(result.decode('utf-8'))
+    # 可以看到，经过处理之后， li 节点标签被补全，并且还向动添加了 body 、 html 节点
 
 if __name__ == '__main__':
     main()
