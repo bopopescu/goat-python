@@ -1,18 +1,5 @@
 # coding: utf-8
-#########################################################################
-# 网站: <a href="http:#www.crazyit.org">疯狂Java联盟</a>               #
-# author yeeku.H.lee kongyeeku@163.com                                  #
-#                                                                       #
-# version 1.0                                                           #
-#                                                                       #
-# Copyright (C), 2001-2018, yeeku.H.Lee                                 #
-#                                                                       #
-# This program is protected by copyright laws.                          #
-#                                                                       #
-# Program Name:                                                         #
-#                                                                       #
-# <br>Date:                                                             #
-#########################################################################
+
 # 定义函数，该函数会包含局部函数
 vdef get_math_func(type, nn) :
     # 定义一个计算平方的局部函数

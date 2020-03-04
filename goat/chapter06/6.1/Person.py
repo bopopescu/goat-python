@@ -1,7 +1,7 @@
 # coding: utf-8
 
 class Person :
-    '这是一个学习Python定义的一个Person类'
+    # '这是一个学习Python定义的一个Person类'
     # 下面定义了一个类变量
     hair = 'black'
     def __init__(self, name = 'Charlie', age=8):

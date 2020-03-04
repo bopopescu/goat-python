@@ -7,6 +7,7 @@ def auth(fn):
         # 回调要装饰的目标函数
         fn(*args)
     return auth_fn
+
 @auth
 def test(a, b):
     print("执行test函数,参数a: %s, 参数b: %s" % (a, b))

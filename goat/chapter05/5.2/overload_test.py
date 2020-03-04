@@ -1,18 +1,5 @@
 # coding: utf-8
-#########################################################################
-# 网站: <a href="http:#www.crazyit.org">疯狂Java联盟</a>               #
-# author yeeku.H.lee kongyeeku@163.com                                  #
-#                                                                       #
-# version 1.0                                                           #
-#                                                                       #
-# Copyright (C), 2001-2018, yeeku.H.Lee                                 #
-#                                                                       #
-# This program is protected by copyright laws.                          #
-#                                                                       #
-# Program Name:                                                         #
-#                                                                       #
-# <br>Date:                                                             #
-#########################################################################
+
 # 下面定义了3个test()函数，但函数的形参列表不同
 # 系统可以区分它们，这被称为函数重载
 def test() :
