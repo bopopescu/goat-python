@@ -2,6 +2,7 @@
 # 这里首先导人 lxml 库的 etree 模块
 from lxml import etree
 
+# 资源文件的读取方式一
 def main():
     text = '''
     <div>
