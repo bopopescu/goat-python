@@ -17,3 +17,19 @@
     chapter19 数据和可视化
     chapter20 网络爬虫
 
+    chapter7-2-3 网络爬虫
+
+# 
+    Traceback (most recent call last):
+      File "E:/Code/Python/MyPython/goat-python/goat/temp/test.py", line 2, in <module>
+        import requests
+    ModuleNotFoundError: No module named 'requests'
+
+    解决方法：
+
+    开始菜单选择运行，输入cmd运行，然后cd命令进入到python安装目录下的Scripts文件中，
+        C:\Program Files (x86)\Python36-32\Scripts 
+    然后输入  pip install requests ，就好了。
+    python -m pip install --upgrade pip
+    
+          pip install lxml
