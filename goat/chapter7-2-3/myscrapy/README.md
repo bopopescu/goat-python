@@ -9,6 +9,8 @@
     如果使用上面的命令太慢。国内可以使用豆瓣源进行加速。  也有阿里云加速
     pip install -i  https://pypi.douban.com/simple scrapy 
     pip install scrapy -i  http://mirrors.aliyun.com/pypi/simple --trusted-host mirrors.aliyun.com 
+    pip install pypiwin32 -i  http://mirrors.aliyun.com/pypi/simple --trusted-host mirrors.aliyun.com 
+    pip install beautifulsoup4 -i  http://mirrors.aliyun.com/pypi/simple --trusted-host mirrors.aliyun.com 
     安装完成之后在命令行输入  scrapy -v  验证是否安装成功
 
 
@@ -25,6 +27,7 @@
      下面生成一个模板   以管理员方式 打开cmd 命令行
      切换到目录   E:\Code\Python\MyPython\goat-python\goat\chapter7-2-3\myscrapy 
      Terminal中 输入 scrapy genspider BaiduSpider http://www.baidu.com
+                     scrapy genspider qsbkSpider "qiushibaike.com"
      运行成功后 再 myscrapy/spiders/ 目录下 会多出一个 BaiduSpider.py 模板文件
      
      这说明我们的spider创建成功。可以在pytharm中使用这个 强大的框架了。
@@ -46,4 +49,22 @@
     │   └── spiders   自己写的爬虫文件目录
     
     └── scrapy.cfg      整个项目的配置文件
-     
+
+
+# settings.py 
+    # Obey robots.txt rules  遵守机器人协议 改成 False
+    ROBOTSTXT_OBEY = False
+    
+    
+    DEFAULT_REQUEST_HEADERS 打开 并增加 请求头
+    'user-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36'
+    
+# 运行    
+    切换目录： E:\Code\Python\MyPython\goat-python\goat\chapter7-2-3\myscrapy
+    命令行中输入： scrapy crawl 【启动类名】
+    scrapy crawl qsbkSpider
+    
+    由于每次都在命令行操作 过于麻烦 新建 start.py 
+    使用scrapy 提供的命令行工具来简化开发与调试
+    cmdline.execute("scrapy crawl qsbkSpider".split())
+    就可以打断点进行调试了！！！
