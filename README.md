@@ -19,7 +19,7 @@
 
     chapter7-2-3 网络爬虫
 
-# 
+# 缺少模块报错：
     Traceback (most recent call last):
       File "E:/Code/Python/MyPython/goat-python/goat/temp/test.py", line 2, in <module>
         import requests
@@ -31,5 +31,5 @@
         C:\Program Files (x86)\Python36-32\Scripts 
     然后输入  pip install requests ，就好了。
     python -m pip install --upgrade pip
-    
-          pip install lxml
+     pip install lxml
+         
