@@ -6,5 +6,6 @@ from scrapy import cmdline
 # cmdline.execute("scrapy crawl qsbkSpider".split())
 # cmdline.execute("scrapy crawl tianyancha_applets".split())
 # cmdline.execute("scrapy crawl app01".split())
-cmdline.execute("scrapy crawl app02".split())
+# cmdline.execute("scrapy crawl app02".split())
+cmdline.execute("scrapy crawl app03".split())
 
