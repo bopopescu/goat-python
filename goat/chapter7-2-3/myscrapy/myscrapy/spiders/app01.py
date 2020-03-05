@@ -1,12 +1,14 @@
 # -*- coding: utf-8 -*-
 import scrapy
 
-
+'''
+抓取网页数据 并保存到本地  请求方式一
+定义 start_urls 属性 并且和 def parse(self, response): 配合使用
+'''
 class App01Spider(scrapy.Spider):
     name = 'app01'
     # 爬虫实验室 首页第一页记录
     start_urls = [ 'http://lab.scrapyd.cn/page/1/', ]
-
 
 
     def parse(self, response):
