@@ -11,6 +11,8 @@
     pip install scrapy -i  http://mirrors.aliyun.com/pypi/simple --trusted-host mirrors.aliyun.com 
     pip install pypiwin32 -i  http://mirrors.aliyun.com/pypi/simple --trusted-host mirrors.aliyun.com 
     pip install beautifulsoup4 -i  http://mirrors.aliyun.com/pypi/simple --trusted-host mirrors.aliyun.com 
+    pip install jsonpath -i  http://mirrors.aliyun.com/pypi/simple --trusted-host mirrors.aliyun.com 
+    pip install pymongo -i  http://mirrors.aliyun.com/pypi/simple --trusted-host mirrors.aliyun.com 
     安装完成之后在命令行输入  scrapy -v  验证是否安装成功
 
 
@@ -28,6 +30,7 @@
      切换到目录   E:\Code\Python\MyPython\goat-python\goat\chapter7-2-3\myscrapy 
      Terminal中 输入 scrapy genspider BaiduSpider http://www.baidu.com
                      scrapy genspider qsbkSpider "qiushibaike.com"
+                     scrapy genspider tianyancha_applets "tianyancha.com"
      运行成功后 再 myscrapy/spiders/ 目录下 会多出一个 BaiduSpider.py 模板文件
      
      这说明我们的spider创建成功。可以在pytharm中使用这个 强大的框架了。
@@ -63,6 +66,8 @@
     切换目录： E:\Code\Python\MyPython\goat-python\goat\chapter7-2-3\myscrapy
     命令行中输入： scrapy crawl 【启动类名】
     scrapy crawl qsbkSpider
+    
+    
     
     由于每次都在命令行操作 过于麻烦 新建 start.py 
     使用scrapy 提供的命令行工具来简化开发与调试

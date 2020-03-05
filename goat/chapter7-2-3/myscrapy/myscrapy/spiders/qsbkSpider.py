@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import scrapy
 
-
 class QsbkspiderSpider(scrapy.Spider):
     # qsbkSpider 爬虫类的类名
     name = 'qsbkSpider'
@@ -20,6 +19,9 @@ class QsbkspiderSpider(scrapy.Spider):
         print(test)
         print("*"*40)
 
+        # 解析结果
+        results = json.loads(response.text)
+        companyList = results.get('data').get('companyList')
 
         pass
 
