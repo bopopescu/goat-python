@@ -24,6 +24,7 @@
      You can start your first spider with:
          cd myscrapy
          scrapy genspider example example.com
+       
          
          
      下面生成一个模板   以管理员方式 打开cmd 命令行
@@ -31,6 +32,7 @@
      Terminal中 输入 scrapy genspider BaiduSpider http://www.baidu.com
                      scrapy genspider qsbkSpider "qiushibaike.com"
                      scrapy genspider tianyancha_applets "tianyancha.com"
+                     scrapy genspider app01  "lab.scrapyd.cn"
      运行成功后 再 myscrapy/spiders/ 目录下 会多出一个 BaiduSpider.py 模板文件
      
      这说明我们的spider创建成功。可以在pytharm中使用这个 强大的框架了。
