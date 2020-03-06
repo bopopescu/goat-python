@@ -37,6 +37,7 @@
                      scrapy genspider app03  "lab.scrapyd.cn"
                      scrapy genspider app04  "lab.scrapyd.cn"
                      scrapy genspider app08   "xicidaili.com"
+                     scrapy genspider tyc   "tianyancha.com"
      运行成功后 再 myscrapy/spiders/ 目录下 会多出一个 BaiduSpider.py 模板文件
      
      这说明我们的spider创建成功。可以在pytharm中使用这个 强大的框架了。
