@@ -5,18 +5,18 @@ from tkinter import *
 from tkinter import ttk
 
 class App:
-    def __init__(self, master):
-        self.master = master
+    def __init__(self, main):
+        self.main = main
         self.initWidgets()
     def initWidgets(self):
         self.st = StringVar()
         # 创建Entry组件，将其textvariable绑定到self.st变量
-        ttk.Entry(self.master, textvariable=self.st,
+        ttk.Entry(self.main, textvariable=self.st,
             width=24,
             font=('StSong', 20, 'bold'), 
             foreground='red').pack(fill=BOTH, expand=YES)
         # 创建Frame作为容器
-        f = Frame(self.master)
+        f = Frame(self.main)
         f.pack()
         # 创建两个按钮，将其放入Frame中
         ttk.Button(f, text='改变', command=self.change).pack(side=LEFT)

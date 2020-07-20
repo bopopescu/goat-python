@@ -5,15 +5,15 @@ from tkinter import *
 from tkinter import ttk
 
 class App:
-    def __init__(self, master):
-        self.master = master
+    def __init__(self, main):
+        self.main = main
         self.initWidgets()
     def initWidgets(self):
         # 创建Style
         style = ttk.Style()
         style.configure("fkit.TPanedwindow", background='darkgray', relief=RAISED)
         # 创建Panedwindow组件，通过style属性配置分隔线
-        pwindow = ttk.Panedwindow(self.master,
+        pwindow = ttk.Panedwindow(self.main,
             orient=VERTICAL, style="fkit.TPanedwindow")  
         pwindow.pack(fill=BOTH, expand=1)
         first = ttk.Label(pwindow, text="第一个标签")

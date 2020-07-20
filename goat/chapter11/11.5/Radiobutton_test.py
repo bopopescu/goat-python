@@ -4,12 +4,12 @@ from tkinter import *
 # 导入ttk
 from tkinter import ttk
 class App:
-    def __init__(self, master):
-        self.master = master
+    def __init__(self, main):
+        self.main = main
         self.initWidgets()
     def initWidgets(self):
         # 创建一个Label组件
-        ttk.Label(self.master, text='选择您喜欢的图书:')\
+        ttk.Label(self.main, text='选择您喜欢的图书:')\
             .pack(fill=BOTH, expand=YES)
         self.intVar = IntVar()
         # 定义元组
@@ -18,7 +18,7 @@ class App:
         i = 1
         # 采用循环创建多个Radiobutton
         for book in books:
-            ttk.Radiobutton(self.master, 
+            ttk.Radiobutton(self.main, 
                 text = book,
                 variable = self.intVar, # 将Radiobutton绑定到self.intVar变量
                 command = self.change, # 将选中事件绑定到self.change方法

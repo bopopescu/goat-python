@@ -4,8 +4,8 @@
 from tkinter import *
 
 class App:
-    def __init__(self, master):
-        self.master = master
+    def __init__(self, main):
+        self.main = main
         self.initWidgets()
         self.expr = None
     def initWidgets(self):
@@ -14,7 +14,7 @@ class App:
             width=25, bg='white', anchor=E)
         # 对该输入组件使用Pack布局，放在容器顶部
         self.show.pack(side=TOP, pady=10)
-        p = Frame(self.master)
+        p = Frame(self.main)
         p.pack(side=TOP)
         # 定义字符串的元组
         names = ("0" , "1" , "2" , "3" 

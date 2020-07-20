@@ -5,25 +5,25 @@ from tkinter import *
 from tkinter import ttk
 from tkinter import messagebox
 class App:
-    def __init__(self, master):
-        self.master = master
+    def __init__(self, main):
+        self.main = main
         self.initWidgets()
     def initWidgets(self):
         # 创建Entry组件
-        self.entry = ttk.Entry(self.master,
+        self.entry = ttk.Entry(self.main,
             width=44,
             font=('StSong', 14), 
             foreground='green')
         self.entry.pack(fill=BOTH, expand=YES)
         # 创建Entry组件
-        self.text = Text(self.master,
+        self.text = Text(self.main,
             width=44,
             height=4,
             font=('StSong', 14), 
             foreground='gray')
         self.text.pack(fill=BOTH, expand=YES)
         # 创建Frame作为容器
-        f = Frame(self.master)
+        f = Frame(self.main)
         f.pack()
         # 创建五个按钮，将其放入Frame中
         ttk.Button(f, text='开始插入', command=self.insert_start).pack(side=LEFT)

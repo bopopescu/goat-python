@@ -5,21 +5,21 @@ from tkinter import *
 from tkinter import ttk
 
 class App:
-    def __init__(self, master):
-        self.master = master
+    def __init__(self, main):
+        self.main = main
         self.initWidgets()
     def initWidgets(self):
         # 创建一个位图
         bm = PhotoImage(file = 'images/serial.png')
         # 创建一个Label，同时指定text和image
-        self.label = ttk.Label(self.master, text='疯狂体\n系图书',\
+        self.label = ttk.Label(self.main, text='疯狂体\n系图书',\
             image=bm, font=('StSong', 20, 'bold'), foreground='red' )
         self.label.bm = bm
         # 设置Label默认的compound为None
         self.label['compound'] = None
         self.label.pack()
         # 创建Frame容器，用于装多个Radiobutton
-        f = ttk.Frame(self.master)
+        f = ttk.Frame(self.main)
         f.pack(fill=BOTH, expand=YES)
         compounds = ('None', "LEFT", "RIGHT", "TOP", "BOTTOM", "CENTER")
         # 定义一个StringVar变量，用作绑定Radiobutton的变量

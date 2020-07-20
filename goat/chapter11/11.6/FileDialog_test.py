@@ -6,30 +6,30 @@ from tkinter import ttk
 # 导入filedialog
 from tkinter import filedialog
 class App:
-    def __init__(self, master):
-        self.master = master
+    def __init__(self, main):
+        self.main = main
         self.initWidgets()
     def initWidgets(self):
         # 创建7个按钮，并为之绑定事件处理函数
-        ttk.Button(self.master, text='打开单个文件',
+        ttk.Button(self.main, text='打开单个文件',
             command=self.open_file # 绑定open_file方法
             ).pack(side=LEFT, ipadx=5, ipady=5, padx= 10)
-        ttk.Button(self.master, text='打开多个文件',
+        ttk.Button(self.main, text='打开多个文件',
             command=self.open_files # 绑定open_files方法
             ).pack(side=LEFT, ipadx=5, ipady=5, padx= 10)
-        ttk.Button(self.master, text='获取单个打开文件的文件名',
+        ttk.Button(self.main, text='获取单个打开文件的文件名',
             command=self.open_filename # 绑定open_filename方法
             ).pack(side=LEFT, ipadx=5, ipady=5, padx= 10)
-        ttk.Button(self.master, text='获取多个打开文件的文件名',
+        ttk.Button(self.main, text='获取多个打开文件的文件名',
             command=self.open_filenames # 绑定open_filenames方法
             ).pack(side=LEFT, ipadx=5, ipady=5, padx= 10)
-        ttk.Button(self.master, text='获取保存文件',
+        ttk.Button(self.main, text='获取保存文件',
             command=self.save_file # 绑定save_file方法
             ).pack(side=LEFT, ipadx=5, ipady=5, padx= 10)
-        ttk.Button(self.master, text='获取保存文件的文件名',
+        ttk.Button(self.main, text='获取保存文件的文件名',
             command=self.save_filename # 绑定save_filename方法
             ).pack(side=LEFT, ipadx=5, ipady=5, padx= 10)
-        ttk.Button(self.master, text='打开路径',
+        ttk.Button(self.main, text='打开路径',
             command=self.open_dir # 绑定open_dir方法
             ).pack(side=LEFT, ipadx=5, ipady=5, padx= 10)
     def open_file(self):

@@ -5,12 +5,12 @@ from tkinter import *
 from tkinter import ttk
 from tkinter import messagebox
 class App:
-    def __init__(self, master):
-        self.master = master
+    def __init__(self, main):
+        self.main = main
         self.initWidgets()
     def initWidgets(self):
         # 创建一个Label组件
-        ttk.Label(self.master, text='选择您喜欢的人物:')\
+        ttk.Label(self.main, text='选择您喜欢的人物:')\
             .pack(fill=BOTH, expand=YES)
         self.chars = []
         # 定义元组
@@ -19,13 +19,13 @@ class App:
         for ch in characters:
             intVar = IntVar()
             self.chars.append(intVar)
-            cb = ttk.Checkbutton(self.master, 
+            cb = ttk.Checkbutton(self.main, 
                 text = ch,
                 variable = intVar, # 将Checkbutton绑定到intVar变量
                 command = self.change) # 将选中事件绑定到self.change方法
             cb.pack(anchor=W)
         # 创建一个Label组件
-        ttk.Label(self.master, text='选择您喜欢的图书:')\
+        ttk.Label(self.main, text='选择您喜欢的图书:')\
             .pack(fill=BOTH, expand=YES)
         # --------------下面是第二组Checkbutton---------------
         self.books = []
@@ -37,7 +37,7 @@ class App:
         for book in books:
             strVar = StringVar()
             self.books.append(strVar)
-            cb = ttk.Checkbutton(self.master, 
+            cb = ttk.Checkbutton(self.main, 
                 text = book,
                 variable = strVar, # 将Checkbutton绑定到strVar变量
                 onvalue = vals[i],

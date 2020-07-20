@@ -24,8 +24,8 @@ BOARD_Y = 600
 BOARD_WIDTH = 80
 BALL_RADIUS = 9
 class App:
-    def __init__(self, master):
-        self.master = master
+    def __init__(self, main):
+        self.main = main
         # 记录小球动画的第几帧
         self.ball_index = 0
         # 记录游戏是否失败的旗标

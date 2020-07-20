@@ -6,17 +6,17 @@ from tkinter import ttk
 from tkinter import messagebox as msgbox
 
 class App:
-    def __init__(self, master):
-        self.master = master
+    def __init__(self, main):
+        self.main = main
         self.init_menu()
     # 创建菜单
     def init_menu(self):
-        # 创建menubar，它被放入self.master中
-        menubar = Menu(self.master)
-        self.master.filenew_icon = PhotoImage(file='images/filenew.png')
-        self.master.fileopen_icon = PhotoImage(file='images/fileopen.png')
+        # 创建menubar，它被放入self.main中
+        menubar = Menu(self.main)
+        self.main.filenew_icon = PhotoImage(file='images/filenew.png')
+        self.main.fileopen_icon = PhotoImage(file='images/fileopen.png')
         # 添加菜单条
-        self.master['menu'] = menubar
+        self.main['menu'] = menubar
         # 创建file_menu菜单，它被放入menubar中
         file_menu = Menu(menubar, tearoff=0)
         # 使用add_cascade方法添加file_menu菜单
@@ -27,9 +27,9 @@ class App:
         menubar.add_cascade(label='选择语言', menu=lang_menu)
         # 使用add_command方法为file_menu添加菜单项
         file_menu.add_command(label="新建", command = None, 
-            image=self.master.filenew_icon, compound=LEFT)
+            image=self.main.filenew_icon, compound=LEFT)
         file_menu.add_command(label="打开", command = None, 
-            image=self.master.fileopen_icon, compound=LEFT)
+            image=self.main.fileopen_icon, compound=LEFT)
         # 使用add_command方法为file_menu添加分隔条
         file_menu.add_separator()
         # 为file_menu创建子菜单

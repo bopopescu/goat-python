@@ -4,11 +4,11 @@ from tkinter import *
 # 导入ttk
 from tkinter import ttk
 class App:
-    def __init__(self, master):
-        self.master = master
+    def __init__(self, main):
+        self.main = main
         self.initWidgets()
     def initWidgets(self):
-        topF = Frame(self.master)
+        topF = Frame(self.main)
         topF.pack(fill=Y, expand=YES)
         # 创建Listbox组件
         self.lb = Listbox(topF)
@@ -22,7 +22,7 @@ class App:
         scroll.pack(side=RIGHT, fill=Y)
         # 设置self.lb的纵向滚动影响scroll滚动条
         self.lb.configure(yscrollcommand=scroll.set)
-        f = Frame(self.master)
+        f = Frame(self.main)
         f.pack()
         Label(f, text = '选择模式:').pack(side=LEFT)
         modes = ('multiple', 'browse', 'single', 'extended')

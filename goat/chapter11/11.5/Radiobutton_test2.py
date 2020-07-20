@@ -4,12 +4,12 @@ from tkinter import *
 # 导入ttk
 from tkinter import ttk
 class App:
-    def __init__(self, master):
-        self.master = master
+    def __init__(self, main):
+        self.main = main
         self.initWidgets()
     def initWidgets(self):
         # 创建一个Label组件
-        ttk.Label(self.master, text='选择您喜欢的兵种:')\
+        ttk.Label(self.main, text='选择您喜欢的兵种:')\
             .pack(fill=BOTH, expand=YES)
         self.intVar = IntVar()
         # 定义元组
@@ -19,7 +19,7 @@ class App:
         # 采用循环创建多个Radiobutton
         for rc in races:
             bm = PhotoImage(file = 'images/' + rc)
-            r = ttk.Radiobutton(self.master, 
+            r = ttk.Radiobutton(self.main, 
                 image = bm,
                 text = raceNames[i - 1],
                 compound = RIGHT, # 图片在文字右边

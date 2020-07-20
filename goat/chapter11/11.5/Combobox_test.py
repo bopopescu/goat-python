@@ -4,19 +4,19 @@ from tkinter import *
 # 导入ttk
 from tkinter import ttk
 class App:
-    def __init__(self, master):
-        self.master = master
+    def __init__(self, main):
+        self.main = main
         self.initWidgets()
     def initWidgets(self):
         self.strVar = StringVar()
         # 创建Combobox组件
-        self.cb = ttk.Combobox(self.master,
+        self.cb = ttk.Combobox(self.main,
             textvariable=self.strVar, # 绑定到self.strVar变量
             postcommand=self.choose) # 当用户单击下拉箭头时触发self.choose方法
         self.cb.pack(side=TOP)
         # 为Combobox配置多个选项
         self.cb['values'] = ['Python', 'Ruby', 'Kotlin', 'Swift']
-        f = Frame(self.master)
+        f = Frame(self.main)
         f.pack()
         self.isreadonly = IntVar()
         # 创建Checkbutton，绑定到self.isreadonly变量

@@ -6,8 +6,8 @@
 from tkinter import *
 import random
 class App:
-    def __init__(self, master):
-        self.master = master
+    def __init__(self, main):
+        self.main = main
         self.initWidgets()
     def initWidgets(self):
         # 定义字符串元组

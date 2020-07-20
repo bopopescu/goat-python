@@ -6,15 +6,15 @@
 from tkinter import *
 
 class App:
-    def __init__(self, master):
-        self.master = master
+    def __init__(self, main):
+        self.main = main
         self.initWidgets()
     def initWidgets(self):
         # 创建一个输入组件
         e = Entry(relief=SUNKEN, font=('Courier New', 24), width=25)
         # 对该输入组件使用Pack布局，放在容器顶部
         e.pack(side=TOP, pady=10)
-        p = Frame(self.master)
+        p = Frame(self.main)
         p.pack(side=TOP)
         # 定义字符串的元组
         names = ("0" , "1" , "2" , "3" 
